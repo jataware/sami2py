@@ -144,29 +144,6 @@ Now everything is as above in the example, for clarity:
   ModelRun = sami2py.Model(tag='run_name', lon=0, year=2012, day=210)
   print(ModelRun)
 
-Will give you:
-.. code-block:: bash
-  Model Run Name = run_name
-  Day 210, 2012
-  Longitude =   0.0 deg
-  97 time steps from  0.0 to 23.8 UT
-  Ions Used: H+, O+, NO+, O2+, He+, N2+
-
-  Solar Activity
-  --------------
-  F10.7: 120.0 sfu
-  F10.7A: 120.0 sfu
-  ap: 0
-
-  Component Models Used
-  ---------------------
-  Neutral Atmosphere: NRLMSISe-2000
-  Winds: HWM-14
-  Photoproduction: EUVAC
-  ExB Drifts: Fejer-Scherliess
-
-  No modifications to empirical models
-
 TODO some issues running this in the docker container right now.
 
 How to Cite

@@ -123,6 +123,52 @@ Now load the resultant data:
 
   ModelRun = sami2py.Model(tag='run_name', lon=0, year=2012, day=210)
 
+Using Docker
+___________
+Running the example with docker:
+
+.. code-block:: bash
+  docker build -t sami2 .
+
+If that went well then to get an ipython shell
+
+.. code-block:: bash
+  docker run -v /path/2/data/on/host:/Data -it sami2
+
+Now everything is as above in the example, for clarity:
+
+.. code-block:: python
+  import sami2py
+  sami2py.utils.set_archive_dir(path="/Data")
+  sami2py.run_model(tag='run_name', lon=0, year=2012, day=210)
+  ModelRun = sami2py.Model(tag='run_name', lon=0, year=2012, day=210)
+  print(ModelRun)
+
+Will give you:
+.. code-block:: bash
+  Model Run Name = run_name
+  Day 210, 2012
+  Longitude =   0.0 deg
+  97 time steps from  0.0 to 23.8 UT
+  Ions Used: H+, O+, NO+, O2+, He+, N2+
+
+  Solar Activity
+  --------------
+  F10.7: 120.0 sfu
+  F10.7A: 120.0 sfu
+  ap: 0
+
+  Component Models Used
+  ---------------------
+  Neutral Atmosphere: NRLMSISe-2000
+  Winds: HWM-14
+  Photoproduction: EUVAC
+  ExB Drifts: Fejer-Scherliess
+
+  No modifications to empirical models
+
+TODO some issues running this in the docker container right now.
+
 How to Cite
 -----------
 When referring to this software package, please cite the original paper by

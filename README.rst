@@ -129,16 +129,19 @@ ___________
 Running the example with docker:
 
 .. code-block:: bash
+
   docker build -t sami2 .
 
 If that went well then to get an ipython shell
 
 .. code-block:: bash
+
   docker run -v /path/2/data/on/host:/Data -it sami2
 
 Now everything is as above in the example, for clarity:
 
 .. code-block:: python
+  
   import sami2py
   sami2py.utils.set_archive_dir(path="/Data")
   sami2py.run_model(tag='run_name', lon=0, year=2012, day=210)

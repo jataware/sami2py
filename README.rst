@@ -125,6 +125,7 @@ Now load the resultant data:
 
 Using Docker
 ___________
+
 Running the example with docker:
 
 .. code-block:: bash
